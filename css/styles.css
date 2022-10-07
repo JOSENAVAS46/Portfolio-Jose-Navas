@@ -39,7 +39,7 @@ body.dark {
 .header {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     height: 75px;
     padding: 0 1.5em;
     background-color: var(--bg-card-color);
@@ -47,6 +47,7 @@ body.dark {
 }
 
 .switches {
+    text-align: left;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -68,9 +69,24 @@ body.dark {
     font-size: 0.8rem;
 }
 
-.colors {
+.flags {
     display: flex;
-    margin-left: 1000px;
+    justify-content: space-between;
+    align-items: center;
+    height: 20px;
+    width: 45px;
+}
+
+.flags_item {
+    margin: 0.1em;
+    width: 20px;
+    cursor: pointer;
+    display: block;
+}
+
+.colors {
+    text-align: right;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 20px;
@@ -78,6 +94,7 @@ body.dark {
 }
 
 .colors_item {
+    margin: 0.2em;
     width: 20px;
     height: 20px;
     border: 1px solid var(--text-color);
@@ -99,6 +116,23 @@ body.dark {
 
 .colors_item--orange {
     --primary-color: hsl(46, 84%, 56%);
+}
+
+.social_network {
+    background-color: transparent;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 120px;
+}
+
+.social_icon {
+    margin: 0.2em;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
 }
 
 .title {
@@ -151,6 +185,7 @@ body.dark {
 .card_title {
     margin: 0;
     font-size: 1.2rem;
+    margin-bottom: 1em;
 }
 
 .card_subtitle {
@@ -171,7 +206,7 @@ body.dark {
     padding: 1em 0;
 }
 
-.skills_header{
+.skills_header {
     display: flex;
     justify-content: space-between;
     width: 175px;
@@ -194,7 +229,7 @@ body.dark {
 
 .skills_bar,
 .skills_bar::after {
-    margin-left: 20px;
+    margin-left: 10px;
     position: relative;
     width: 175px;
     height: 8px;
@@ -209,7 +244,7 @@ body.dark {
     left: -175px;
     background-color: var(--primary-color);
     transition: var(--transition);
-    animation: skills-bar-fill 5s ease-in-out forwards;
+    animation: skills-bar-fill 3s ease-in-out forwards;
 }
 
 .skills_bar--10::after {
@@ -249,6 +284,44 @@ body.dark {
     --skills-bar-length: 90%;
 }
 
+.experience {
+    display: flex;
+    align-items: start;
+    margin-bottom: 1em;
+    padding: 1em;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.experience_image {
+    max-width: 15%;
+    margin-right: 1em;
+}
+
+.experience_time {
+    font-size: 0.8rem;
+    margin-bottom: 0.5em;
+}
+
+.experience_job {
+    margin: 0;
+    margin-bottom: 0.5em;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.card-hobbies {
+    margin-top: 0.5em;
+}
+
+.experience_description {
+    font-size: 0.8rem;
+    margin-bottom: 1.5em;
+}
+
+
+
 .icon {
     margin-right: 1em;
 }
@@ -257,4 +330,13 @@ body.dark {
     to {
         transform: translateX(var(--skills-bar-length));
     }
+}
+
+img {
+    user-select: none;
+    pointer-events: none;
+}
+
+p {
+    text-align: justify;
 }

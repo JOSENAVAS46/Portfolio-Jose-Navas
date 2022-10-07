@@ -1,0 +1,30 @@
+{
+    "profile": {
+        "rol": "Junior Backend Developer.",
+        "description": "Backend developer, applied, passionate, willing to learn and get ahead being of benefit to the company. I have a better development in applications or Desktop programs. The technologies that I currently dominate the most are Java, C#, Springboot. As for Database I have knowledge about SQLServer, PostgresSQL and MySQL."
+    },
+    "hobbies": {
+        "first-hobbie-tittle": "Mountain Bike",
+        "first-hobbie-description": "I am fascinated by the fact of riding a bicycle, this being a means of transport that is good for the environment and for health."
+    },
+    "tech": {
+        "first-tech-title": "Front End",
+        "second-tech-title": "Back End",
+        "third-tech-title": "Data Base",
+        "tech_dates": "Years of experience"
+    },
+    "experience": {
+        "first-job-tipe": "Development Experience",
+        "first-job-title": "Front End and Back End Developer - Intern (Sudamericana de Software)",
+        "first-job-dates": "September 2022 - Current",
+        "first-job-description": "Intern of the South American Software company where I was trained in the necessary technologies to be able to get the maximum potential in the requirements that are requested. Among those HTML, CSS, JavaScript, APIs in Springboot and .NET.",
+        "second-job-tipe": "Information Gathering Experience",
+        "second-job-title": "Interviewer and Supervisor (IESOP)",
+        "second-job-dates": "June 2019 - August 2022",
+        "second-job-description": "Survey personnel for the collection of information according to the stratum and sampling requested. Surveys at national level in various provinces of Ecuador. Among them Guayas, El Oro, Santa Elena.",
+        "third-job-tipe": "Experience in Product Sales and Consulting",
+        "third-job-title": "Commercial Advisor (Bazar y Novedades \"Anita\")",
+        "third-job-dates": "June 2018 - February 2019",
+        "third-job-description": "Commercial advisor of the business, with the positions of handling Point of Sale and dispatch, providing the customer with a personalized attention according to their needs."
+    }
+}

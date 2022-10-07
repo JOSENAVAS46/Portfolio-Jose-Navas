@@ -5,9 +5,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/assets/images/portafolio.png" />
+    <link rel="icon" type="image/png" href="/assets/icons/portafolio.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    <link rel="stylesheet" href="css/styles.css" /> 
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Portfolio Jose Navas</title>
 </head>
 
@@ -17,6 +17,14 @@
             <div id="toggle_theme" class="toggle-theme">
                 <img id="toggle_icon" src="assets/icons/moon.svg" alt="icon theme" class="toggle-theme_icon" />
                 <p id="toggle_text" class="toggle-theme_text">Dark Mode</p>
+            </div>
+        </div>
+        <div id="flags" class="flags">
+            <div class="flags_item" data-language="es">
+                <img src="assets/icons/espana.png" alt="Español">
+            </div>
+            <div class="flags_item" data-language="en">
+                <img src="assets/icons/reino-unido.png" alt="Ingles">
             </div>
         </div>
         <div id="toggle_colors" class="colors">
@@ -39,7 +47,7 @@
                 </div>
                 <div class="card_header">
                     <h2 class="card_title">José Francisco Navas Ordoñez</h2>
-                    <p class="card_subtitle">Desarrollador Backend Jr.</p>
+                    <p class="card_subtitle" data-section="profile" data-value="rol">Desarrollador Backend Jr.</p>
                 </div>
                 <div class="card_body">
                     <div class="card_link">
@@ -54,23 +62,45 @@
                             +593 96 300 2366
                         </a>
                     </div>
-                    <p class="card_text">
+                    <div id="social_network" class="social_network">
+                        <div class="social_icon">
+                            <a target="_blank" href="https://www.facebook.com/josefrancisco.navasordonez">
+                                <img src="assets/icons/facebook.png" alt="Facebook">
+                            </a>
+                        </div>
+                        <div class="social_icon">
+                            <a target="_blank" href="https://www.instagram.com/jose_navas_46/">
+                                <img src="assets/icons/instagram.png" alt="Instagram">
+                            </a>
+                        </div>
+                        <div class="social_icon">
+                            <a target="_blank" href="https://github.com/JOSENAVAS46">
+                                <img src="assets/icons/github.png" alt="Github">
+                            </a>
+                        </div>
+                        <div class="social_icon">
+                            <a target="_blank"
+                                href="https://www.linkedin.com/in/jos%C3%A9-francisco-navas-ord%C3%B3%C3%B1ez-836574167/">
+                                <img src="assets/icons/linkedin.png" alt="LinkedIn">
+                            </a>
+                        </div>
+                    </div>
+                    <p class="card_text" data-section="profile" data-value="description">
                         Desarrollador Backend, aplicado, apasionado, dispuesto a aprender
-                        y salir adelante siendo de provecho para la compañia. <br />
+                        y salir adelante siendo de provecho para la compañia.
                         Poseo un mejor desenvolvimiento en aplicaciones o programas
-                        Desktop <br />
-                        Las tecnologias que mas domino actualmente son Java, C#,
-                        Springboot. <br />
-                        En cuanto a Base de Datos tengo conocimiento sobre SQLServer,
+                        Desktop. Las tecnologias que mas domino actualmente son Java, C#,
+                        Springboot. En cuanto a Base de Datos tengo conocimiento sobre SQLServer,
                         PostgresSQL y MySQL.
                     </p>
                 </div>
+
             </article>
         </section>
         <section class="column column--right">
             <article class="card">
-                <h2 class="card_title">Front End</h2>
-                <small>Años de Experiencia</small>
+                <h2 class="card_title" data-section="tech" data-value="first-tech-title">Front End</h2>
+                <small data-section="tech" data-value="tech_dates">Años de Experiencia</small>
                 <div class="skills_header">
                     <span class="skills_start_level"> 0 </span>
                     <span class="skills_start_level"> 2 </span>
@@ -91,8 +121,8 @@
                 </div>
             </article>
             <article class="card">
-                <h2 class="card_title">Back End</h2>
-                <small>Años de Experiencia</small>
+                <h2 class="card_title" data-section="tech" data-value="second-tech-title">Back End</h2>
+                <small data-section="tech" data-value="tech_dates">Años de Experiencia</small>
                 <div class="skills_header">
                     <span class="skills_start_level"> 0 </span>
                     <span class="skills_start_level"> 6 </span>
@@ -113,8 +143,8 @@
                 </div>
             </article>
             <article class="card">
-                <h2 class="card_title">Base de Datos</h2>
-                <small>Años de Experiencia</small>
+                <h2 class="card_title" data-section="tech" data-value="third-tech-title">Base de Datos</h2>
+                <small data-section="tech" data-value="tech_dates">Años de Experiencia</small>
                 <div class="skills_header">
                     <span class="skills_start_level"> 0 </span>
                     <span class="skills_start_level"> 3 </span>
@@ -134,7 +164,89 @@
                     </div>
                 </div>
             </article>
+            <article class="card card-experience">
+                <h2 class="card_title" data-section="experience" data-value="first-job-tipe">
+                    Experiencia en Desarrollo
+                </h2>
+                <div class="experience">
+                    <img src="assets/images/SASF.jpg" alt="logo" class="experience_image">
+                    <div class="experience_info">
+                        <p class="experience_time" data-section="experience" data-value="first-job-dates">
+                            Septiembre 2022 - Actualidad
+                        </p>
+                        <h3 class="experience_job" data-section="experience" data-value="first-job-title">
+                            Front End & Back End Developer - Pasante (Sudamericana de Software)
+                        </h3>
+                        <p class="experience_description" data-section="experience" data-value="first-job-description">
+                            Pasante de la empresa Sudamericana de Software donde me formaron en las tecnologias
+                            necesarias para poder sacar el maximo potencial en los requerimientos que se soliciten.
+                            Entre esas HTML, CSS, JavaScript, APIs en Springboot y .NET.
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <article class="card card-experience">
+                <h2 class="card_title" data-section="experience" data-value="second-job-tipe">
+                    Experiencia en Levantamiento de Informacion
+                </h2>
+                <div class="experience">
+                    <img src="assets/images/encuesta.png" alt="logo" class="experience_image">
+                    <div class="experience_info">
+                        <p class="experience_time" data-section="experience" data-value="second-job-dates">
+                            Junio 2019 - Agosto 2022
+                        </p>
+                        <h3 class="experience_job" data-section="experience" data-value="second-job-title">
+                            Encuestador & Supervisor (IESOP)
+                        </h3>
+                        <p class="experience_description" data-section="experience" data-value="second-job-description">
+                            Personal encuestador para el levantamiento de informacion de acuerdo a el estrato y muestreo
+                            solicitado. Encuestas a nivel nacional en diversas provincias del Ecuador. Entre ellas
+                            Guayas, El Oro, Santa Elena.
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <article class="card card-experience">
+                <h2 class="card_title" data-section="experience" data-value="third-job-tipe">
+                    Experiencia en Asesoria y Venta de Productos
+                </h2>
+                <div class="experience">
+                    <img src="assets/images/Venta.png" alt="logo" class="experience_image">
+                    <div class="experience_info">
+                        <p class="experience_time" data-section="experience" data-value="third-job-dates">
+                            Junio 2018 - Febrero 2019
+                        </p>
+                        <h3 class="experience_job" data-section="experience" data-value="third-job-title">
+                            Asesor Comercial (Bazar y Novedades "Anita")
+                        </h3>
+                        <p class="experience_description" data-section="experience" data-value="third-job-description">
+                            Asesor comercial del negocio, con los cargos de manejo de Punto de venta y despacho,
+                            brindando al cliente una atencion personalizada de acorde a sus necesidades.
+                        </p>
+                    </div>
+                </div>
+            </article>
         </section>
+        <section>
+            <article class="card card-hobbies">
+                <h2 class="card_title">
+                    Hobbies
+                </h2>
+                <div>
+                    <div class="card_image-container">
+                        <img src="assets/images/bici.jpeg" alt="Mi Bicicleta">
+                    </div>
+                    <h3 class="hobbie_title" data-section="hobbies" data-value="first-hobbie-tittle">
+                        Bicicleta de Montaña
+                    </h3>
+                    <p class="card_text" data-section="hobbies" data-value="first-hobbie-description">
+                        Me fascina el hecho de andar en bicicleta, siendo este un medio de transporte bueno para el
+                        medio ambiente y para la salud.
+                    </p>
+                </div>
+            </article>
+        </section>
+
     </main>
     <script src="js/scripts.js"></script>
 </body>
