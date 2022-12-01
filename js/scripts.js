@@ -41,5 +41,7 @@ toggleTheme.addEventListener("click", () => {
 });
 
 toggleColors.addEventListener("click", (e) => {
+    if(e.target.dataset.color != null){
     rootStyles.setProperty("--primary-color", e.target.dataset.color);
+    }
 });
