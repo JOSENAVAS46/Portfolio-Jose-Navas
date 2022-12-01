@@ -16,7 +16,7 @@
     "experience": {
         "first-job-tipe": "Development Experience",
         "first-job-title": "Front End and Back End Developer - Intern (Sudamericana de Software)",
-        "first-job-dates": "September 2022 - Current",
+        "first-job-dates": "September 2022 - November 2022",
         "first-job-description": "Intern of the South American Software company where I was trained in the necessary technologies to be able to get the maximum potential in the requirements that are requested. Among those HTML, CSS, JavaScript, APIs in Springboot and .NET.",
         "second-job-tipe": "Information Gathering Experience",
         "second-job-title": "Interviewer and Supervisor (IESOP)",
@@ -26,5 +26,12 @@
         "third-job-title": "Commercial Advisor (Bazar y Novedades \"Anita\")",
         "third-job-dates": "June 2018 - February 2019",
         "third-job-description": "Commercial advisor of the business, with the positions of handling Point of Sale and dispatch, providing the customer with a personalized attention according to their needs."
+    },
+    "projects": {
+        "first-projects-tittle":"My Portfolio",
+        "first-projects-description":"Website created to publicize my experiences, work, studies, knowledge, forms of contact to companies or people interested in hiring my services.",
+        "second-projects-tittle":"Pokedex with Pokeapi",
+        "second-projects-description":"Web page made to consume APIs for a better communication of the Backend and Frontend with the Database.",
+        "project-button": "Code"
     }
 }

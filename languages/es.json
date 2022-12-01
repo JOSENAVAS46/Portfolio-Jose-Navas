@@ -3,28 +3,35 @@
         "rol": "Desarrollador Backend Jr.",
         "description": "Desarrollador Backend, aplicado, apasionado, dispuesto a aprender y salir adelante siendo de provecho para la compañia. Poseo un mejor desenvolvimiento en aplicaciones o programas Desktop. Las tecnologias que mas domino actualmente son Java, C#, Springboot. En cuanto a Base de Datos tengo conocimiento sobre SQLServer, PostgresSQL y MySQL."
     },
-    "hobbies":{
+    "hobbies": {
         "first-hobbie-tittle": "Bicicleta de Montaña",
-        "first-hobbie-description":"Me fascina el hecho de andar en bicicleta, siendo este un medio de transporte bueno para el medio ambiente y para la salud."
+        "first-hobbie-description": "Me fascina el hecho de andar en bicicleta, siendo este un medio de transporte bueno para el medio ambiente y para la salud."
     },
-    "tech":{
-        "first-tech-title" : "Front End",
-        "second-tech-title" : "Back End",
-        "third-tech-title" : "Base de Datos",
-        "tech_dates" : "Años de Experiencia"
+    "tech": {
+        "first-tech-title": "Front End",
+        "second-tech-title": "Back End",
+        "third-tech-title": "Base de Datos",
+        "tech_dates": "Años de Experiencia"
     },
     "experience": {
         "first-job-tipe": "Experiencia en Desarrollo",
         "first-job-title": "Front End & Back End Developer - Pasante (Sudamericana de Software)",
-        "first-job-dates": "Septiembre 2022 - Actualidad",
+        "first-job-dates": "Septiembre 2022 - Noviembre 2022",
         "first-job-description": "Pasante de la empresa Sudamericana de Software donde me formaron en las tecnologias necesarias para poder sacar el maximo potencial en los requerimientos que se soliciten. Entre esas HTML, CSS, JavaScript, APIs en Springboot y .NET.",
         "second-job-tipe": "Experiencia en Levantamiento de Informacion",
         "second-job-title": "Encuestador & Supervisor (IESOP)",
-        "second-job-dates": "Junio 2019 - Agposto 2022",
+        "second-job-dates": "Junio 2019 - Agosto 2022",
         "second-job-description": "Personal encuestador para el levantamiento de informacion de acuerdo a el estrato y muestreo solicitado. Encuestas a nivel nacional en diversas provincias del Ecuador. Entre ellas Guayas, El Oro, Santa Elena.",
         "third-job-tipe": "Experiencia en Asesoria y Venta de Productos",
         "third-job-title": "Asesor Comercial (Bazar y Novedades \"Anita\")",
         "third-job-dates": "Junio 2018 - Febrero 2019",
         "third-job-description": "Asesor comercial del negocio, con los cargos de manejo de Punto de venta y despacho, brindando al cliente una atencion personalizada de acorde a sus necesidades."
+    },
+    "projects": {
+        "first-projects-tittle":"Mi Portafolio",
+        "first-projects-description":"Pagina web creada para dar a conocer mis experiencias, trabajos, estudios, conocimientos, formas de contacto a las empresas o personas con el interes de contratar mis servicios.",
+        "second-projects-tittle":"Pokedex con Pokeapi",
+        "second-projects-description":"Pagina web realizada para poder consumir APIs para una mejor comunicacion del Backend y Frontend con la Base de Datos..",
+        "project-button": "Código"
     }
 }
