@@ -1,7 +1,7 @@
 {
     "profile": {
         "rol": "Desarrollador Backend Jr.",
-        "description": "Desarrollador Backend, aplicado, apasionado, dispuesto a aprender y salir adelante siendo de provecho para la compañia. Poseo un mejor desenvolvimiento en aplicaciones o programas Desktop. Las tecnologias que mas domino actualmente son Java, C#, Springboot. En cuanto a Base de Datos tengo conocimiento sobre SQLServer, PostgresSQL y MySQL."
+        "description": "Desarrollador Backend, aplicado, apasionado, dispuesto a aprender y salir adelante siendo de provecho para la compañia. Poseo un mejor desenvolvimiento en aplicaciones o programas Desktop. Las tecnologias que mas domino actualmente son Java, C#, Springboot y Flutter. En cuanto a Base de Datos tengo conocimiento sobre SQLServer, PostgresSQL y MySQL."
     },
     "hobbies": {
         "first-hobbie-tittle": "Bicicleta de Montaña",
@@ -11,6 +11,7 @@
         "first-tech-title": "Front End",
         "second-tech-title": "Back End",
         "third-tech-title": "Base de Datos",
+        "fourth-tech-title": "Movil",
         "tech_dates": "Años de Experiencia"
     },
     "experience": {
@@ -25,13 +26,17 @@
         "third-job-tipe": "Experiencia en Asesoria y Venta de Productos",
         "third-job-title": "Asesor Comercial (Bazar y Novedades \"Anita\")",
         "third-job-dates": "Junio 2018 - Febrero 2019",
-        "third-job-description": "Asesor comercial del negocio, con los cargos de manejo de Punto de venta y despacho, brindando al cliente una atencion personalizada de acorde a sus necesidades."
+        "third-job-description": "Asesor comercial del negocio, con los cargos de manejo de Punto de venta y despacho, brindando al cliente una atencion personalizada de acorde a sus necesidades.",
+        "fourth-job-tipe": "Experiencia en Desarrollo",
+        "fourth-job-title": "Full Stack y Movil (Birobid S.A.)",
+        "fourth-job-dates": "Febrero 2024 - Actualidad",
+        "fourth-job-description": "Desarrollador Full Stack Jr. en las tecnologias de .NET Framework, React.js, SQLServer, Flask, Flutter."
     },
     "projects": {
-        "first-projects-tittle":"Mi Portafolio",
-        "first-projects-description":"Pagina web creada para dar a conocer mis experiencias, trabajos, estudios, conocimientos, formas de contacto a las empresas o personas con el interes de contratar mis servicios.",
-        "second-projects-tittle":"Pokedex con Pokeapi",
-        "second-projects-description":"Pagina web realizada para poder consumir APIs para una mejor comunicacion del Backend y Frontend con la Base de Datos..",
+        "first-projects-tittle": "Mi Portafolio",
+        "first-projects-description": "Pagina web creada para dar a conocer mis experiencias, trabajos, estudios, conocimientos, formas de contacto a las empresas o personas con el interes de contratar mis servicios.",
+        "second-projects-tittle": "Pokedex con Pokeapi",
+        "second-projects-description": "Pagina web realizada para poder consumir APIs para una mejor comunicacion del Backend y Frontend con la Base de Datos..",
         "project-button": "Código"
     }
 }

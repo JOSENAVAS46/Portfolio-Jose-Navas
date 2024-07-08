@@ -1,7 +1,7 @@
 {
     "profile": {
         "rol": "Junior Backend Developer.",
-        "description": "Backend developer, applied, passionate, willing to learn and get ahead being of benefit to the company. I have a better development in applications or Desktop programs. The technologies that I currently dominate the most are Java, C#, Springboot. As for Database I have knowledge about SQLServer, PostgresSQL and MySQL."
+        "description": "Backend developer, applied, passionate, willing to learn and get ahead being of benefit to the company. I have a better development in applications or Desktop programs. The technologies that I currently dominate the most are Java, C#, Springboot and Flutter. As for Database I have knowledge about SQLServer, PostgresSQL and MySQL."
     },
     "hobbies": {
         "first-hobbie-tittle": "Mountain Bike",
@@ -11,6 +11,7 @@
         "first-tech-title": "Front End",
         "second-tech-title": "Back End",
         "third-tech-title": "Data Base",
+        "fourth-tech-title": "Mobile",
         "tech_dates": "Years of experience"
     },
     "experience": {
@@ -25,13 +26,17 @@
         "third-job-tipe": "Experience in Product Sales and Consulting",
         "third-job-title": "Commercial Advisor (Bazar y Novedades \"Anita\")",
         "third-job-dates": "June 2018 - February 2019",
-        "third-job-description": "Commercial advisor of the business, with the positions of handling Point of Sale and dispatch, providing the customer with a personalized attention according to their needs."
+        "third-job-description": "Commercial advisor of the business, with the positions of handling Point of Sale and dispatch, providing the customer with a personalized attention according to their needs.",
+        "fourth-job-tipe": "Development Experience",
+        "fourth-job-title": "Full Stack and Mobile (Birobid S.A.)",
+        "fourth-job-dates": "February 2024 - Present",
+        "fourth-job-description": "Junior Full Stack Developer in technologies such as .NET Framework, React.js, SQLServer, Flask, Flutter."
     },
     "projects": {
-        "first-projects-tittle":"My Portfolio",
-        "first-projects-description":"Website created to publicize my experiences, work, studies, knowledge, forms of contact to companies or people interested in hiring my services.",
-        "second-projects-tittle":"Pokedex with Pokeapi",
-        "second-projects-description":"Web page made to consume APIs for a better communication of the Backend and Frontend with the Database.",
+        "first-projects-tittle": "My Portfolio",
+        "first-projects-description": "Website created to publicize my experiences, work, studies, knowledge, forms of contact to companies or people interested in hiring my services.",
+        "second-projects-tittle": "Pokedex with Pokeapi",
+        "second-projects-description": "Web page made to consume APIs for a better communication of the Backend and Frontend with the Database.",
         "project-button": "Code"
     }
 }
