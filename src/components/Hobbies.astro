@@ -1,0 +1,26 @@
+---
+import { Image } from 'astro:assets';
+import type { Lang } from '../i18n/ui';
+import { tr } from '../i18n/utils';
+import { hobbies } from '../data/portfolio';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+---
+
+{
+  hobbies.map((hobby) => (
+    <div class="hobby">
+      <div class="hobby_image">
+        <Image src={hobby.image} alt={tr(hobby.title, lang)} widths={[320, 480, 640]} sizes="(min-width: 560px) 320px, 90vw" />
+      </div>
+      <div>
+        <h3 class="hobby_title">{tr(hobby.title, lang)}</h3>
+        <p class="hobby_description">{tr(hobby.description, lang)}</p>
+      </div>
+    </div>
+  ))
+}

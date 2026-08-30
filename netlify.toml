@@ -1,0 +1,9 @@
+# Netlify sirve el sitio en la raíz (sin DEPLOY_TARGET → base '/').
+# GitHub Pages usa .github/workflows/deploy.yml con DEPLOY_TARGET=gh-pages.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"

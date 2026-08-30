@@ -1,0 +1,52 @@
+---
+import type { Lang } from '../i18n/ui';
+import { tr } from '../i18n/utils';
+import type { Experience } from '../data/portfolio';
+
+interface Props {
+  item: Experience;
+  lang: Lang;
+}
+
+const { item, lang } = Astro.props;
+const monogram = item.company.charAt(0).toUpperCase();
+const logoBg = item.logoBg ?? 'light';
+---
+
+<article class="experience">
+  <div
+    class:list={[
+      'experience_logo',
+      { 'experience_logo--wide': item.logoWide },
+      `experience_logo--bg-${logoBg}`,
+    ]}
+  >
+    {
+      item.logo ? (
+        <img src={item.logo.src} alt={item.company} loading="lazy" decoding="async" />
+      ) : (
+        <span class="experience_monogram" aria-hidden="true">
+          {monogram}
+        </span>
+      )
+    }
+  </div>
+  <div class="experience_body">
+    <h3 class="experience_role">{tr(item.role, lang)}</h3>
+    <p class="experience_company">
+      {
+        item.url ? (
+          <a href={item.url} target="_blank" rel="noopener noreferrer">
+            {item.company}
+          </a>
+        ) : (
+          item.company
+        )
+      }
+      <span class="experience_dot">·</span>
+      {item.location}
+    </p>
+    <p class="experience_dates tnum">{tr(item.dates, lang)}</p>
+    <p class="experience_description">{tr(item.description, lang)}</p>
+  </div>
+</article>

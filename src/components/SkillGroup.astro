@@ -1,0 +1,43 @@
+---
+import type { Lang } from '../i18n/ui';
+import { tr, useTranslations } from '../i18n/utils';
+import type { SkillGroup } from '../data/portfolio';
+
+interface Props {
+  group: SkillGroup;
+  lang: Lang;
+}
+
+const { group, lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<div class="skillrow">
+  <div class="skillrow_head">
+    <span class="skillrow_title">{tr(group.title, lang)}</span>
+    <span class="skillrow_years">
+      <span class="tnum">{group.years.from}–{group.years.to}</span> {t('skills.years')}
+    </span>
+  </div>
+
+  <ul class="skills">
+    {
+      group.skills.map((skill) => (
+        <li class="skills_item">
+          <span class="skills_name">{skill.name}</span>
+          <span class="skills_pct tnum">{skill.level}%</span>
+          <span
+            class="skills_bar"
+            role="progressbar"
+            aria-valuenow={skill.level}
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-label={skill.name}
+          >
+            <span class="skills_bar_fill" style={`--level: ${skill.level}%`} />
+          </span>
+        </li>
+      ))
+    }
+  </ul>
+</div>

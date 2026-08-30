@@ -1,0 +1,73 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from './Header.astro';
+import ProfileCard from './ProfileCard.astro';
+import SkillGroup from './SkillGroup.astro';
+import ExperienceCard from './ExperienceCard.astro';
+import ProjectCard from './ProjectCard.astro';
+import Hobbies from './Hobbies.astro';
+import type { Lang } from '../i18n/ui';
+import { useTranslations } from '../i18n/utils';
+import { skillGroups, experience, projects } from '../data/portfolio';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const year = new Date().getFullYear();
+---
+
+<Layout lang={lang}>
+  <Header lang={lang} />
+
+  <main class="main">
+    <div class="layout">
+      <aside class="layout_aside">
+        <ProfileCard lang={lang} />
+      </aside>
+
+      <div class="layout_content">
+        <section class="section">
+          <header class="section_header">
+            <h2 class="section_title">{t('stack.title')}</h2>
+          </header>
+          <div class="panel">
+            {skillGroups.map((group) => <SkillGroup group={group} lang={lang} />)}
+          </div>
+        </section>
+
+        <section class="section">
+          <header class="section_header">
+            <h2 class="section_title">{t('experience.title')}</h2>
+          </header>
+          <div class="stack">
+            {experience.map((item) => <ExperienceCard item={item} lang={lang} />)}
+          </div>
+        </section>
+
+        <section class="section">
+          <header class="section_header">
+            <h2 class="section_title">{t('projects.title')}</h2>
+          </header>
+          <div class="projects-grid">
+            {projects.map((project) => <ProjectCard project={project} lang={lang} />)}
+          </div>
+        </section>
+
+        <section class="section">
+          <header class="section_header">
+            <h2 class="section_title">{t('hobbies.title')}</h2>
+          </header>
+          <Hobbies lang={lang} />
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <span>© {year} José Navas</span>
+    <span>{t('footer.built')}</span>
+  </footer>
+</Layout>

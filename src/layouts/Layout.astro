@@ -1,0 +1,74 @@
+---
+import '@fontsource-variable/fraunces';
+import '@fontsource/ibm-plex-sans/400.css';
+import '@fontsource/ibm-plex-sans/500.css';
+import '@fontsource/ibm-plex-sans/600.css';
+import '../styles/global.css';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import type { Lang } from '../i18n/ui';
+import { useTranslations } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const title = t('meta.title');
+const description = t('meta.description');
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const faviconPath = `${base}/favicon.png`;
+
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL(faviconPath, Astro.site);
+
+const alternates: { hreflang: string; href: string }[] = [
+  { hreflang: 'es', href: new URL(getRelativeLocaleUrl('es', ''), Astro.site).href },
+  { hreflang: 'en', href: new URL(getRelativeLocaleUrl('en', ''), Astro.site).href },
+  { hreflang: 'x-default', href: new URL(getRelativeLocaleUrl('es', ''), Astro.site).href },
+];
+---
+
+<!doctype html>
+<html lang={lang} class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href={faviconPath} />
+    <link rel="canonical" href={canonical.href} />
+    {alternates.map((a) => <link rel="alternate" hreflang={a.hreflang} href={a.href} />)}
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="José Francisco Navas Ordoñez" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical.href} />
+    <meta property="og:image" content={ogImage.href} />
+    <meta property="og:locale" content={lang === 'es' ? 'es_ES' : 'en_US'} />
+    <meta property="og:locale:alternate" content={lang === 'es' ? 'en_US' : 'es_ES'} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage.href} />
+
+    <script is:inline>
+      (function () {
+        try {
+          var theme = localStorage.getItem('theme');
+          if (theme === 'light') document.documentElement.classList.remove('dark');
+          else document.documentElement.classList.add('dark');
+          var accent = localStorage.getItem('accent');
+          if (accent) document.documentElement.style.setProperty('--accent', accent);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

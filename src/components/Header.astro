@@ -1,0 +1,24 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import type { Lang } from '../i18n/ui';
+import { useTranslations } from '../i18n/utils';
+import ThemeControls from './ThemeControls.astro';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const otherLang: Lang = lang === 'es' ? 'en' : 'es';
+const switchHref = getRelativeLocaleUrl(otherLang, '');
+---
+
+<header class="site-header">
+  <ThemeControls lang={lang} />
+
+  <a class="lang-switch" href={switchHref} hreflang={otherLang} aria-label={t('nav.switchLangAria')}>
+    {t('nav.switchLang')}
+  </a>
+</header>

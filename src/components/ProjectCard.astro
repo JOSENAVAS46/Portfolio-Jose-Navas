@@ -1,0 +1,52 @@
+---
+import { Image } from 'astro:assets';
+import type { Lang } from '../i18n/ui';
+import { tr, useTranslations } from '../i18n/utils';
+import type { Project } from '../data/portfolio';
+
+interface Props {
+  project: Project;
+  lang: Lang;
+}
+
+const { project, lang } = Astro.props;
+const t = useTranslations(lang);
+const isWork = project.kind === 'work';
+const badge = isWork
+  ? `${t('projects.work')}${project.company ? ` · ${project.company}` : ''}`
+  : t('projects.personal');
+---
+
+<article class="project">
+  {
+    project.image && (
+      <div class="project_image">
+        <Image
+          src={project.image}
+          alt={tr(project.title, lang)}
+          widths={[320, 480, 640]}
+          sizes="(min-width: 720px) 480px, 90vw"
+        />
+      </div>
+    )
+  }
+  <p class:list={['project_badge', isWork ? 'project_badge--work' : 'project_badge--personal']}>
+    {badge}
+  </p>
+  <h3 class="project_title">{tr(project.title, lang)}</h3>
+  <ul class="project_tech">
+    {project.tech.map((tech) => <li>{tech}</li>)}
+  </ul>
+  <p class="project_description">{tr(project.description, lang)}</p>
+  {
+    project.link && (
+      <a class="project_link" href={project.link.url} target="_blank" rel="noopener noreferrer">
+        {tr(project.link.label, lang)}
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7 17 17 7" />
+          <path d="M8 7h9v9" />
+        </svg>
+      </a>
+    )
+  }
+</article>
